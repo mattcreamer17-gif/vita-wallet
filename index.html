@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Vita Wallet x Eduba. Una lectura del stack.</title>
+<meta name="description" content="Registrados bajo la Ley Fintech, ISO 27001, entrada a EE.UU. en H1 2026. Hipótesis sobre dónde la orquestación de cumplimiento va a tocar un muro." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Roboto+Mono:wght@400;500&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body data-lang="es">
+
+<header class="site-header">
+  <div class="wrap header-wrap">
+    <a class="brand" href="https://vitawallet.io" target="_blank" rel="noopener" aria-label="Vita Wallet">
+      <img src="logo.png" alt="Vita Wallet" />
+    </a>
+    <nav class="lang" aria-label="Language">
+      <button type="button" class="lang-btn active" data-lang-switch="es" aria-pressed="true">ES</button>
+      <span class="lang-divider" aria-hidden="true">/</span>
+      <button type="button" class="lang-btn" data-lang-switch="en" aria-pressed="false">EN</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="blob blob-a"></div>
+    <div class="blob blob-b"></div>
+    <div class="grid-lines"></div>
+  </div>
+
+  <div class="wrap hero-wrap">
+
+    <div class="hero-meta">
+      <span class="pill pill-prepared">
+        <span class="dot"></span>
+        <span data-i18n="prepared">Preparado para Vita Wallet</span>
+      </span>
+      <span class="pill pill-event" data-i18n="event">eMerge Americas 2026 / Booth SS100</span>
+    </div>
+
+    <h1 class="headline">
+      <span class="line-1" data-i18n="h1a">Una lectura honesta de dónde encaja la IA</span>
+      <span class="line-2" data-i18n="h1b">en el stack de Vita Wallet.</span>
+      <span class="line-3" data-i18n="h1c">Y dónde no.</span>
+    </h1>
+
+    <p class="lede" data-i18n="lede">
+      Siete años conectando Chile con más de 190 países. 300.000 usuarios.
+      2.500 empresas. Más de 60 millones de dólares mensuales en
+      transacciones con stablecoins. ISO 27001. Registro bajo la Ley Fintech.
+      Hipótesis sobre dónde la capa de cumplimiento se va a poner densa primero.
+    </p>
+
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="https://calendly.com/thecro-eduba/30min" target="_blank" rel="noopener">
+        <span data-i18n="cta_primary">30 minutos con Matt Creamer</span>
+        <svg class="arr" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a class="btn btn-ghost" href="https://calendly.com/thecro-eduba/30min" target="_blank" rel="noopener" data-i18n="cta_secondary">calendly.com/thecro-eduba/30min</a>
+    </div>
+
+    <div class="trust-strip" aria-label="Contexto de confianza">
+      <div class="trust-item"><span class="trust-num">190+</span><span class="trust-lab" data-i18n="t1">países</span></div>
+      <div class="trust-sep" aria-hidden="true"></div>
+      <div class="trust-item"><span class="trust-num">300.000</span><span class="trust-lab" data-i18n="t2">usuarios</span></div>
+      <div class="trust-sep" aria-hidden="true"></div>
+      <div class="trust-item"><span class="trust-num">ISO 27001</span><span class="trust-lab" data-i18n="t3">certificado</span></div>
+      <div class="trust-sep" aria-hidden="true"></div>
+      <div class="trust-item"><span class="trust-num">6</span><span class="trust-lab" data-i18n="t4">jurisdicciones</span></div>
+    </div>
+
+  </div>
+</section>
+
+<section class="thesis">
+  <div class="wrap">
+
+    <div class="sec-head">
+      <span class="kicker" data-i18n="k_thesis">01 · Tesis</span>
+      <h2 class="sec-title" data-i18n="thesis_title">Muchos equipos automatizan la capa equivocada.</h2>
+      <p class="sec-sub" data-i18n="thesis_sub">
+        El valor siempre queda arriba de lo que se acaba de comoditizar.
+        La pregunta útil no es "¿dónde meter un LLM?" sino "¿qué capa
+        resuelve este problema?"
+      </p>
+    </div>
+
+    <div class="stack-grid" role="list">
+
+      <article class="layer layer-60" role="listitem">
+        <div class="layer-head">
+          <span class="layer-pct">60%</span>
+          <span class="layer-tag" data-i18n="l_code">Código y base de datos</span>
+        </div>
+        <p data-i18n="l_code_body">
+          Pagos, liquidación, reportería. Postgres hace este trabajo más
+          rápido, más barato y con mejores garantías que un modelo.
+        </p>
+        <div class="bar"><div class="fill" style="--w:60%"></div></div>
+      </article>
+
+      <article class="layer layer-30" role="listitem">
+        <div class="layer-head">
+          <span class="layer-pct">30%</span>
+          <span class="layer-tag" data-i18n="l_rules">Reglas de negocio</span>
+        </div>
+        <p data-i18n="l_rules_body">
+          AML, KYC, políticas por jurisdicción. Reglas determinísticas,
+          versionadas, auditables. No son IA. Son políticas escritas como código.
+        </p>
+        <div class="bar"><div class="fill" style="--w:30%"></div></div>
+      </article>
+
+      <article class="layer layer-10" role="listitem">
+        <div class="layer-head">
+          <span class="layer-pct">10%</span>
+          <span class="layer-tag" data-i18n="l_ai">Problemas genuinos de IA</span>
+        </div>
+        <p data-i18n="l_ai_body">
+          Detección de anomalías en corredores, triaje de casos B2B,
+          asistencia interna sobre documentación regulatoria multi-país.
+        </p>
+        <div class="bar"><div class="fill" style="--w:10%"></div></div>
+      </article>
+
+    </div>
+
+    <p class="thesis-closer" data-i18n="thesis_close">
+      La oportunidad real es diseñar la capa de orquestación que decide
+      qué herramienta responde a cada caso, con trazabilidad completa y
+      con evidencia que un regulador puede auditar.
+    </p>
+
+  </div>
+</section>
+
+<section class="read">
+  <div class="wrap">
+
+    <div class="sec-head">
+      <span class="kicker" data-i18n="k_read">02 · Qué leímos antes de esta página</span>
+      <h2 class="sec-title" data-i18n="read_title">Vinimos con el camino leído.</h2>
+    </div>
+
+    <div class="read-grid">
+      <div class="read-card">
+        <span class="read-lab" data-i18n="r1_lab">Ley Fintech</span>
+        <p data-i18n="r1_body">Los paneles públicos de Joel Zambrano sobre la transición a registro CMF bajo Ley 21.521.</p>
+      </div>
+      <div class="read-card">
+        <span class="read-lab" data-i18n="r2_lab">Custodia</span>
+        <p data-i18n="r2_body">La arquitectura con Dfns: MPC sobre Polygon, Bitcoin, Tron y BSC.</p>
+      </div>
+      <div class="read-card">
+        <span class="read-lab" data-i18n="r3_lab">Corredores</span>
+        <p data-i18n="r3_body">La red Andina, más Argentina y México. Y dónde las reseñas muestran fricción.</p>
+      </div>
+      <div class="read-card">
+        <span class="read-lab" data-i18n="r4_lab">Roadmap</span>
+        <p data-i18n="r4_body">Entrada a Estados Unidos en el primer semestre de 2026, con RTP y FedNow.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="proof">
+  <div class="wrap">
+
+    <div class="sec-head">
+      <span class="kicker" data-i18n="k_proof">03 · Evidencia, no promesas</span>
+      <h2 class="sec-title" data-i18n="proof_title">El patrón que vemos en Vita se parece a este trabajo.</h2>
+    </div>
+
+    <div class="proof-grid">
+
+      <article class="case case-primary">
+        <header class="case-head">
+          <span class="case-tag" data-i18n="c1_tag">Caso principal</span>
+          <h3>KPMG UK</h3>
+          <p class="case-sub" data-i18n="c1_sub">KPMG UK, one of the Big Four.</p>
+        </header>
+        <ul class="case-list">
+          <li><strong>40+</strong> <span data-i18n="c1_a">ejecutivos entrenados</span></li>
+          <li><strong data-i18n="c1_b_val">Industria regulada</strong> <span data-i18n="c1_b">audiencia senior</span></li>
+          <li><strong data-i18n="c1_c_val">Cero tolerancia</strong> <span data-i18n="c1_c">para demos que no sobreviven a revisión de riesgo</span></li>
+        </ul>
+        <p class="case-why" data-i18n="c1_why">
+          Elegido por perfil: equipos senior, conversación técnica,
+          cumplimiento pesado. Es lo más cercano en el portafolio al
+          contexto de Vita.
+        </p>
+      </article>
+
+      <article class="case case-secondary">
+        <header class="case-head">
+          <span class="case-tag" data-i18n="c2_tag">Caso adyacente</span>
+          <h3>VigilOre</h3>
+          <p class="case-sub" data-i18n="c2_sub">Plataforma de cumplimiento multi-agente.</p>
+        </header>
+        <ul class="case-list">
+          <li><strong>160+ h</strong> <span data-i18n="c2_a">de trabajo de cumplimiento semanal</span></li>
+          <li><strong>&lt; 5 min</strong> <span data-i18n="c2_b">por revisión, con trazabilidad por decisión</span></li>
+          <li><strong data-i18n="c2_c_val">Agentes multi-etapa</strong> <span data-i18n="c2_c">documento pesado, regulado</span></li>
+        </ul>
+        <p class="case-why" data-i18n="c2_why">
+          Evidencia del patrón de colapso de cumplimiento. Mismo tipo
+          de workflow que Vita corre seis veces en paralelo.
+        </p>
+      </article>
+
+    </div>
+
+    <div class="proof-extras">
+      <div class="extra">
+        <span class="extra-num">1.500+</span>
+        <span class="extra-lab" data-i18n="e1">personas entrenadas en engagements enterprise desde mayo 2025</span>
+      </div>
+      <div class="extra">
+        <span class="extra-num">Correlation One</span>
+        <span class="extra-lab" data-i18n="e2">Pacific Life, Colgate-Palmolive. 6.000 a 9.000 horas ahorradas al año. 95% de adopción a 30 días.</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="paper">
+  <div class="wrap">
+
+    <div class="sec-head">
+      <span class="kicker" data-i18n="k_paper">04 · Base metodológica publicada</span>
+      <h2 class="sec-title" data-i18n="paper_title">Ethics Engine.</h2>
+    </div>
+
+    <div class="paper-card">
+      <p class="paper-body" data-i18n="paper_body">
+        Ethics Engine es una herramienta psicométrica para evaluar patrones
+        ideológicos y morales en modelos LLM. Relevante cuando la pregunta
+        del regulador es "¿pueden probar que el sistema hizo lo que le
+        dijeron que hiciera?"
+      </p>
+      <div class="paper-links">
+        <a href="https://arxiv.org/abs/2510.11742" target="_blank" rel="noopener" class="paper-link">
+          <span class="paper-lk-lab">arXiv</span>
+          <span class="paper-lk-url">arxiv.org/abs/2510.11742</span>
+        </a>
+        <a href="https://github.com/RinDig/AuditEngine" target="_blank" rel="noopener" class="paper-link">
+          <span class="paper-lk-lab">GitHub</span>
+          <span class="paper-lk-url">github.com/RinDig/AuditEngine</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="jake">
+  <div class="wrap">
+
+    <div class="sec-head">
+      <span class="kicker" data-i18n="k_jake">05 · Quién está del otro lado</span>
+      <h2 class="sec-title" data-i18n="jake_title">Jake Van Clief.</h2>
+    </div>
+
+    <div class="jake-grid">
+      <div class="jake-bio">
+        <p data-i18n="jake_p1">
+          Fundador de Eduba. Veterano de la Infantería de Marina de
+          EE.UU. con ocho años en sistemas criptográficos. Master en
+          Future Governance por la Universidad de Edimburgo. Publicaciones
+          en ACM TiiS y arXiv.
+        </p>
+        <p data-i18n="jake_p2">
+          Construyó además una comunidad online que llegó a 22.000
+          miembros en cinco semanas. No es el pitch. Es evidencia de
+          que entiende distribución y producto.
+        </p>
+      </div>
+      <aside class="jake-side">
+        <dl>
+          <div><dt data-i18n="js1">Entidad operadora</dt><dd>Van Clief Media LLC</dd></div>
+          <div><dt data-i18n="js2">Base</dt><dd>St. Augustine, Florida</dd></div>
+          <div><dt data-i18n="js3">Partnership</dt><dd data-i18n="js3v">NLP Logix: en machine learning desde 2011 y con más de 150 data scientists</dd></div>
+        </dl>
+      </aside>
+    </div>
+
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <div class="cta-card">
+      <div class="cta-left">
+        <span class="cta-kicker" data-i18n="k_cta">06 · Lo que proponemos</span>
+        <h2 class="cta-title" data-i18n="cta_title">30 minutos. Un workflow que odias. Una lectura concreta.</h2>
+        <p class="cta-body" data-i18n="cta_body">
+          Salimos de la llamada con una lectura específica sobre qué
+          capa lo resuelve: código, reglas, IA, o "no lo construyamos."
+        </p>
+        <div class="cta-who">
+          <div class="who-badge">MC</div>
+          <div>
+            <div class="who-name">Matt Creamer</div>
+            <div class="who-role" data-i18n="who_role">CRO, Eduba</div>
+          </div>
+        </div>
+      </div>
+      <div class="cta-right">
+        <a class="btn btn-primary btn-big" href="https://calendly.com/thecro-eduba/30min" target="_blank" rel="noopener">
+          <span data-i18n="cta_book">Reservar 30 minutos</span>
+          <svg class="arr" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a class="cta-url" href="https://calendly.com/thecro-eduba/30min" target="_blank" rel="noopener">calendly.com/thecro-eduba/30min</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap foot-wrap">
+    <div class="foot-left">
+      <span data-i18n="foot_prep">Preparado por Eduba</span>
+      <span class="foot-sep" aria-hidden="true">·</span>
+      <a href="https://eduba.io" target="_blank" rel="noopener">eduba.io</a>
+    </div>
+    <div class="foot-right">
+      <span data-i18n="foot_for">Página construida para Vita Wallet</span>
+      <span class="foot-sep" aria-hidden="true">·</span>
+      <a href="https://vitawallet.io" target="_blank" rel="noopener">vitawallet.io</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var strings = {
+    es: {
+      prepared: "Preparado para Vita Wallet",
+      event: "eMerge Americas 2026 / Booth SS100",
+      h1a: "Una lectura honesta de dónde encaja la IA",
+      h1b: "en el stack de Vita Wallet.",
+      h1c: "Y dónde no.",
+      lede: "Siete años conectando Chile con más de 190 países. 300.000 usuarios. 2.500 empresas. Más de 60 millones de dólares mensuales en transacciones con stablecoins. ISO 27001. Registro bajo la Ley Fintech. Hipótesis sobre dónde la capa de cumplimiento se va a poner densa primero.",
+      cta_primary: "30 minutos con Matt Creamer",
+      cta_secondary: "calendly.com/thecro-eduba/30min",
+      t1: "países", t2: "usuarios", t3: "certificado", t4: "jurisdicciones",
+      k_thesis: "01 · Tesis",
+      thesis_title: "Muchos equipos automatizan la capa equivocada.",
+      thesis_sub: "El valor siempre queda arriba de lo que se acaba de comoditizar. La pregunta útil no es \"¿dónde meter un LLM?\" sino \"¿qué capa resuelve este problema?\"",
+      l_code: "Código y base de datos",
+      l_code_body: "Pagos, liquidación, reportería. Postgres hace este trabajo más rápido, más barato y con mejores garantías que un modelo.",
+      l_rules: "Reglas de negocio",
+      l_rules_body: "AML, KYC, políticas por jurisdicción. Reglas determinísticas, versionadas, auditables. No son IA. Son políticas escritas como código.",
+      l_ai: "Problemas genuinos de IA",
+      l_ai_body: "Detección de anomalías en corredores, triaje de casos B2B, asistencia interna sobre documentación regulatoria multi-país.",
+      thesis_close: "La oportunidad real es diseñar la capa de orquestación que decide qué herramienta responde a cada caso, con trazabilidad completa y con evidencia que un regulador puede auditar.",
+      k_read: "02 · Qué leímos antes de esta página",
+      read_title: "Vinimos con el camino leído.",
+      r1_lab: "Ley Fintech", r1_body: "Los paneles públicos de Joel Zambrano sobre la transición a registro CMF bajo Ley 21.521.",
+      r2_lab: "Custodia", r2_body: "La arquitectura con Dfns: MPC sobre Polygon, Bitcoin, Tron y BSC.",
+      r3_lab: "Corredores", r3_body: "La red Andina, más Argentina y México. Y dónde las reseñas muestran fricción.",
+      r4_lab: "Roadmap", r4_body: "Entrada a Estados Unidos en el primer semestre de 2026, con RTP y FedNow.",
+      k_proof: "03 · Evidencia, no promesas",
+      proof_title: "El patrón que vemos en Vita se parece a este trabajo.",
+      c1_tag: "Caso principal", c1_sub: "KPMG UK, one of the Big Four.",
+      c1_a: "ejecutivos entrenados", c1_b_val: "Industria regulada", c1_b: "audiencia senior",
+      c1_c_val: "Cero tolerancia", c1_c: "para demos que no sobreviven a revisión de riesgo",
+      c1_why: "Elegido por perfil: equipos senior, conversación técnica, cumplimiento pesado. Es lo más cercano en el portafolio al contexto de Vita.",
+      c2_tag: "Caso adyacente", c2_sub: "Plataforma de cumplimiento multi-agente.",
+      c2_a: "de trabajo de cumplimiento semanal", c2_b: "por revisión, con trazabilidad por decisión",
+      c2_c_val: "Agentes multi-etapa", c2_c: "documento pesado, regulado",
+      c2_why: "Evidencia del patrón de colapso de cumplimiento. Mismo tipo de workflow que Vita corre seis veces en paralelo.",
+      e1: "personas entrenadas en engagements enterprise desde mayo 2025",
+      e2: "Pacific Life, Colgate-Palmolive. 6.000 a 9.000 horas ahorradas al año. 95% de adopción a 30 días.",
+      k_paper: "04 · Base metodológica publicada",
+      paper_title: "Ethics Engine.",
+      paper_body: "Ethics Engine es una herramienta psicométrica para evaluar patrones ideológicos y morales en modelos LLM. Relevante cuando la pregunta del regulador es \"¿pueden probar que el sistema hizo lo que le dijeron que hiciera?\"",
+      k_jake: "05 · Quién está del otro lado",
+      jake_title: "Jake Van Clief.",
+      jake_p1: "Fundador de Eduba. Veterano de la Infantería de Marina de EE.UU. con ocho años en sistemas criptográficos. Master en Future Governance por la Universidad de Edimburgo. Publicaciones en ACM TiiS y arXiv.",
+      jake_p2: "Construyó además una comunidad online que llegó a 22.000 miembros en cinco semanas. No es el pitch. Es evidencia de que entiende distribución y producto.",
+      js1: "Entidad operadora", js2: "Base", js3: "Partnership",
+      js3v: "NLP Logix: en machine learning desde 2011 y con más de 150 data scientists",
+      k_cta: "06 · Lo que proponemos",
+      cta_title: "30 minutos. Un workflow que odias. Una lectura concreta.",
+      cta_body: "Salimos de la llamada con una lectura específica sobre qué capa lo resuelve: código, reglas, IA, o \"no lo construyamos.\"",
+      who_role: "CRO, Eduba",
+      cta_book: "Reservar 30 minutos",
+      foot_prep: "Preparado por Eduba",
+      foot_for: "Página construida para Vita Wallet"
+    },
+    en: {
+      prepared: "Prepared for Vita Wallet",
+      event: "eMerge Americas 2026 / Booth SS100",
+      h1a: "An honest read on where AI fits",
+      h1b: "in Vita Wallet's stack.",
+      h1c: "And where it doesn't.",
+      lede: "Seven years connecting Chile with 190+ countries. 300,000 users. 2,500 businesses. Over $60M/month in stablecoin transactions. ISO 27001. Registered under the Chilean Fintech Law. A hypothesis on which compliance layer gets dense first.",
+      cta_primary: "30 minutes with Matt Creamer",
+      cta_secondary: "calendly.com/thecro-eduba/30min",
+      t1: "countries", t2: "users", t3: "certified", t4: "jurisdictions",
+      k_thesis: "01 · Thesis",
+      thesis_title: "Most teams automate the wrong layer.",
+      thesis_sub: "Value always sits above whatever just got commoditized. The useful question is not \"where do we add an LLM?\" It is \"which layer solves this problem?\"",
+      l_code: "Code and database",
+      l_code_body: "Payments, settlement, reporting. Postgres does this work faster, cheaper, and with better guarantees than a model.",
+      l_rules: "Business rules",
+      l_rules_body: "AML, KYC, policies per jurisdiction. Deterministic, versioned, auditable rules. This is not AI. It is policy written as code.",
+      l_ai: "Genuine AI problems",
+      l_ai_body: "Anomaly detection on corridors, B2B case triage, internal assistance on multi-country regulatory documentation.",
+      thesis_close: "The real opportunity is designing the orchestration layer that decides which tool answers each case, with full traceability and evidence a regulator can audit.",
+      k_read: "02 · What we read before this page",
+      read_title: "We showed up with the homework done.",
+      r1_lab: "Fintech Law", r1_body: "Joel Zambrano's public panels on the transition to CMF registration under Law 21.521.",
+      r2_lab: "Custody", r2_body: "The Dfns architecture: MPC across Polygon, Bitcoin, Tron, and BSC.",
+      r3_lab: "Corridors", r3_body: "The Andean network, plus Argentina and Mexico. And where the reviews show friction.",
+      r4_lab: "Roadmap", r4_body: "US entry in the first half of 2026, with RTP and FedNow integration.",
+      k_proof: "03 · Evidence, not promises",
+      proof_title: "The pattern we see in Vita looks like this work.",
+      c1_tag: "Primary case", c1_sub: "KPMG UK, one of the Big Four.",
+      c1_a: "executives trained", c1_b_val: "Regulated industry", c1_b: "senior-level audience",
+      c1_c_val: "Zero tolerance", c1_c: "for demos that do not survive risk review",
+      c1_why: "Chosen on profile: senior teams, technical conversation, heavy compliance. The closest existing case to Vita's context.",
+      c2_tag: "Adjacent case", c2_sub: "Multi-agent compliance platform.",
+      c2_a: "of weekly compliance work", c2_b: "per review, with per-decision traceability",
+      c2_c_val: "Multi-stage agents", c2_c: "document-heavy, regulated",
+      c2_why: "Evidence of the compliance-collapse pattern. Same kind of workflow Vita runs six times in parallel.",
+      e1: "people trained across enterprise engagements since May 2025",
+      e2: "Pacific Life, Colgate-Palmolive. 6,000 to 9,000 hours saved per year. 95% 30-day adoption.",
+      k_paper: "04 · Published methodological base",
+      paper_title: "Ethics Engine.",
+      paper_body: "Ethics Engine is a psychometric assessment tool for evaluating ideological and moral patterns in LLMs. Relevant when the regulator's question is \"can you prove the system did what you told it to do?\"",
+      k_jake: "05 · Who sits on the other side",
+      jake_title: "Jake Van Clief.",
+      jake_p1: "Founder of Eduba. US Marine Corps veteran, eight years in cryptographic systems. MSc Future Governance, University of Edinburgh. Published in ACM TiiS and arXiv.",
+      jake_p2: "Jake also built an online community to 22,000 members in 5 weeks. Not the pitch. Evidence of distribution and product instinct.",
+      js1: "Operating entity", js2: "Based in", js3: "Partnership",
+      js3v: "NLP Logix has been in machine learning since 2011 and runs over 150 data scientists",
+      k_cta: "06 · What we propose",
+      cta_title: "30 minutes. One workflow you hate. A concrete read.",
+      cta_body: "Leave the call with a specific read on which layer solves it: code, rules, AI, or \"do not build it.\"",
+      who_role: "CRO, Eduba",
+      cta_book: "Book 30 minutes",
+      foot_prep: "Prepared by Eduba",
+      foot_for: "Page built for Vita Wallet"
+    }
+  };
+
+  function setLang(lang){
+    document.documentElement.setAttribute("lang", lang);
+    document.body.setAttribute("data-lang", lang);
+    var nodes = document.querySelectorAll("[data-i18n]");
+    nodes.forEach(function(n){
+      var key = n.getAttribute("data-i18n");
+      if(strings[lang] && strings[lang][key]) n.textContent = strings[lang][key];
+    });
+    document.querySelectorAll("[data-lang-switch]").forEach(function(b){
+      var on = b.getAttribute("data-lang-switch") === lang;
+      b.classList.toggle("active", on);
+      b.setAttribute("aria-pressed", on ? "true" : "false");
+    });
+    if(lang === "es"){
+      document.title = "Vita Wallet x Eduba. Una lectura del stack.";
+    } else {
+      document.title = "Vita Wallet x Eduba. A read on the stack.";
+    }
+  }
+
+  document.querySelectorAll("[data-lang-switch]").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      setLang(btn.getAttribute("data-lang-switch"));
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
